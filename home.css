@@ -177,11 +177,6 @@
   padding-bottom: 100px;
 }
 
-.testimonial-image {
-  /* border-radius: 100%; */
-  width: 10%;
-}
-
 .star{
   color: #F9CC00;
 }
@@ -277,6 +272,7 @@
 }
 
 /* end Footer section */
+
 @media (max-width: 768px){
     .px-14 {
       padding-left: 16px;
@@ -309,6 +305,13 @@
       padding: 0px 16px 60px 16px;
     }
 
+    #why-us {
+      padding-bottom: 60px;
+    }
+
+    #testimonial {
+      padding-bottom: 60px;
+    }
     .star{
       align-self: center;
       padding-top: 24px;
@@ -316,6 +319,10 @@
     }
     .item {
       padding: 40px 32px 40px 32px; 
+    }
+
+    #banner{
+      margin-bottom: 60px;
     }
     
     #faq {
@@ -344,4 +351,8 @@
     .main-img-container {
       height: 150px;
     }
+    .custom-offcanvas {
+      width: 60%;
+    }
+    
 }
