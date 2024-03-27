@@ -12,12 +12,9 @@ $(".owl-carousel").owlCarousel({
         0: {
             items: 1,
         },
-        600: {
+        576: {
             items: 2,
-        },
-        1000: {
-            items: 2,
-        },
+        }
     },
 });
 

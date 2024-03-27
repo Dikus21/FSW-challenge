@@ -20,6 +20,11 @@
   padding-top: 24px;
 }
 
+.logo {
+  width: 100px;
+  height: 34px;
+}
+
 .btn-register{
   background-color: #5CB85F;
   color: white;
@@ -72,17 +77,8 @@
 
 #main {
   background-color: #F1F3FF;
-  padding-top: 100px;
-
 }
 
-/* .container-fluid.main-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-} */
 .main-text-container{
   padding-top: 120px;
   padding-bottom: 100px;
@@ -182,9 +178,8 @@
 }
 
 .testimonial-image {
-  border-radius: 100%;
-  width: 80px;
-  height: 70px;
+  /* border-radius: 100%; */
+  width: 10%;
 }
 
 .star{
@@ -236,11 +231,6 @@
   margin-bottom: 100px;
 }
 
-.p2_banner{
-  padding: 0px 300px 0px 300px;
-  justify-content: center;
-}
-
 /* end banner section */
 
 /* FAQ section */
@@ -272,4 +262,59 @@
 
 .accordion-item{
   border: none;
+}
+
+@media (max-width: 768px){
+    .px-14 {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .pl-14 {
+      padding-left: 16px;
+    }
+    .main-img-container {
+      height: 300px;
+    }
+    .main-text-container {
+      padding-top: 90px;
+    }
+    #our-services {
+      padding: 0px;
+    }
+    .our-services-img-container{
+      padding: 60px 54px 24px 54px;
+    }
+    .our-services-text-container{
+      padding: 0px 16px 60px 16px;
+    }
+
+    .star{
+      align-self: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .item {
+      padding: 40px 32px 40px 32px; 
+    }
+
+    .mx-14 {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    /* .p2_banner {
+      padding: 0px 58px 0px 58px;
+    } */
+}
+
+@media (max-width: 576px){
+    .main-img-container {
+      height: 250px;
+    }
+}
+
+@media (max-width: 430px){
+    .main-img-container {
+      height: 150px;
+    }
 }
