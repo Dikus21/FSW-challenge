@@ -264,6 +264,19 @@
   border: none;
 }
 
+/* end FAQ section */
+
+/* Footer section */
+
+#footer {
+  padding-bottom: 100px;
+}
+
+.footer-2{
+  padding-left: 30px;
+}
+
+/* end Footer section */
 @media (max-width: 768px){
     .px-14 {
       padding-left: 16px;
@@ -273,12 +286,19 @@
     .pl-14 {
       padding-left: 16px;
     }
+
+    .mx-14 {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+
     .main-img-container {
       height: 300px;
     }
     .main-text-container {
       padding-top: 90px;
     }
+
     #our-services {
       padding: 0px;
     }
@@ -297,14 +317,21 @@
     .item {
       padding: 40px 32px 40px 32px; 
     }
-
-    .mx-14 {
-      margin-left: 16px;
-      margin-right: 16px;
+    
+    #faq {
+      margin-bottom: 60px;
     }
-    /* .p2_banner {
-      padding: 0px 58px 0px 58px;
-    } */
+    .faq-left{
+      align-items: center;
+    }
+
+    .footer-2{
+      padding-left: 12px;
+    }
+    .footer-4{
+      padding-top: 15px;
+    }
+
 }
 
 @media (max-width: 576px){
