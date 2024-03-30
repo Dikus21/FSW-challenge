@@ -53,6 +53,15 @@
   font-weight: 700;
 }
 
+.offcanvas-btn-close {
+  --bs-btn-padding-x: 0rem;
+  --bs-btn-padding-y: 0rem;
+}
+
+.offcanvas-logo, .offcanvas-btn-close{
+  transform: translateY(80%);
+}
+
 /* end navbar section */
 
 
