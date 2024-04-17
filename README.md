@@ -1,1 +1,1 @@
-# synrgy-7-challenge
+# FSW-challenge
