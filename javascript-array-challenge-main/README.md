@@ -2,9 +2,9 @@
 
 Tugasmu disini adalah memodifikasi file-file berikut:
 
-- [`scripts/filterCarByAvailability.js`](scriptsilterCarByAvailability.js)
-- [`scripts/sortCarByYearAscendingly.js`](scriptsortCarByYearAscendingly.js)
-- [`scripts/sortCarByYearDecendingly.js`](scriptsortCarByYearDecendingly.js)
+- [`scripts/filterCarByAvailability.js`](./scripts/filterCarByAvailability.js)
+- [`scripts/sortCarByYearAscendingly.js`](./scripts/sortCarByYearAscendingly.js)
+- [`scripts/sortCarByYearDecendingly.js`](./scripts/sortCarByYearDecendingly.js)
 
 Dimana masing-masing file tersebut terdapat sebuah fungsi. Penjelasan terkait fungsi-fungsi tersebut dapat dilihat pada bagian selanjutnya.
 
