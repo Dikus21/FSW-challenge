@@ -1,0 +1,26 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "Binar Retnal Car Web App",
+  "main": "app.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon server/challenge.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dikus21/FSW-challenge.git"
+  },
+  "author": "Andika Tirta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dikus21/FSW-challenge/issues"
+  },
+  "homepage": "https://github.com/Dikus21/FSW-challenge#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "feather-icons": "^4.29.2"
+  }
+}
