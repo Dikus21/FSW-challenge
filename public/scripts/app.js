@@ -20,22 +20,22 @@ export class App {
 
     Array.from(elements).forEach((element, index) => {
       if (element.type === 'submit' || element.type === 'button') {
-        console.log(`Skipped: ${element.type} at index ${index}`);
+        // console.log(`Skipped: ${element.type} at index ${index}`);
         return
       }
-      console.log(`Index: ${index}, Element Type: ${element.type}, Element Name: ${element.name}`);
+      // console.log(`Index: ${index}, Element Type: ${element.type}, Element Name: ${element.name}`);
       const inputGroup = element.closest('[role="wrapper"]');
       // console.log(inputGroup);
         if (element.required && !element.value) {
-          console.log(`Element name: ${element.name}, Input: ${inputGroup}`);
+          // console.log(`Element name: ${element.name}, Input: ${inputGroup}`);
           messages.push(`${element.name} is required`);
           if (inputGroup) inputGroup.style.borderColor = "red";
           else element.style.borderColor = "red";
         } else  {
-          console.log(`Removed element name: ${element.name}, Input: ${inputGroup}`);
+          // console.log(`Removed element name: ${element.name}, Input: ${inputGroup}`);
           if (inputGroup) {
             inputGroup.style.borderColor = "";
-            console.log("REMOVE tanggal sewa sukses")
+            // console.log("REMOVE tanggal sewa sukses")
           }
           else element.style.borderColor = "";
         }
@@ -52,12 +52,12 @@ export class App {
     const newDate = new Date(`${availableDate}T${pickUpTime}Z`);
 
 
-    console.log(availableDate, pickUpTime, carCapacity, driverType, newDate);
+    // console.log(availableDate, pickUpTime, carCapacity, driverType, newDate);
     const filteredCars = [];
     this.carContainerElement.innerHTML = '';
     Car.list.forEach((car) => {
       if (car.availableAt.getTime() > newDate.getTime() && car.capacity >= carCapacity && car.available === driverType) {
-        console.log(car.availableAt)
+        // console.log(car.availableAt)
         filteredCars.push(car);
         const node = document.createElement("div");
         node.innerHTML = car.render();

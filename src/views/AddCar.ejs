@@ -1,0 +1,63 @@
+<p>
+    <b>Cars</b> > <b>List Car</b> > Add New Car
+</p>
+<div class="container mt-5">
+    <form method="post" action="/cars" enctype="multipart/form-data">
+      <div class="row mb-3">
+        <div class="col-3"><label for="name" class="form-label">Name</label></div>
+        <div class="col"><input type="text" class="form-control" id="name" name="name" placeholder="Placeholder"></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><label for="price" class="form-label">Price</label></div>
+        <div class="col"><input type="number" class="form-control" id="price" name="price" placeholder="Placeholder">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><label for="image" class="form-label">Image</label></div>
+        <div class="col">
+            <input type="file" class="form-control" id="image" name="image" onchange="previewImage();">
+            <img id="imagePreview" src="/image/noImage.jpg" alt="Book Image" height="200">
+
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><label for="startRent" class="form-label">Start Rent</label></div>
+        <div class="col">-</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><label for="finishRent" class="form-label">Finish Rent</label></div>
+        <div class="col">-</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><label for="createdDate" class="form-label">Created at</label></div>
+        <div class="col">-</div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-3"><label for="updatedDate" class="form-label">Updated at</label></div>
+        <div class="col">-</div>
+      </div>
+      <div class="container">
+        <a href="/cars" class="btn btn-primary">Cancel</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    function previewImage() {
+        const input = document.getElementById('image');
+        const preview = document.getElementById('imagePreview');
+        console.log("input files : " + input.files);
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

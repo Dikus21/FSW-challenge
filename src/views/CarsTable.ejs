@@ -1,0 +1,172 @@
+<p>
+    <b>Cars</b> > List Car
+</p>
+<div class="container-fluid navbar">
+    <b>List Car</b>
+    <div class="d-flex flex-row">
+        <a href="/cars/add" class="btn btn-primary">
+            <i data-feather="plus"></i>
+            Add New Car
+        </a>
+    </div>
+</div>
+<div id="cars-container" class="container-fluid d-flex justify-content-center flex-wrap">
+    <% cars.forEach(car => { %>
+    <div class="car-filter-card card mx-3 my-3">
+        <img src="/uploads/<%= car.image %>" class="car-filter-img img-fluid">
+        <div class="card-body">
+            <p class="card-text"><%= car.name %>/Tipe Mobil</p>
+            <p class="fw-bold fs-5">Rp <%= car.price %> /hari</p>
+            <div class="d-flex align-items-center my-2">
+                <i data-feather="key" class="car-icon"></i>
+                <p class="my-0 mx-2">Start Rent - Finish Rent</p>
+            </div>
+            <div class="d-flex align-items-center my-2">
+                <i data-feather="clock" class="car-icon"></i>
+                <p class="my-0 mx-2">Updated at 4 Apr 2022, 09:00</p>
+            </div>
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <button type="button" class="deleteCarButton btn d-block w-100"
+                        data-car-id="<%= car.id %>"><i data-feather="trash" class="car-edit-icon"></i> Delete</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="editCarButton btn d-block w-100" type="button" data-car-id="<%= car.id %>"
+                            data-car-name="<%= car.name %>" data-car-price="<%= car.price %>"
+                            data-car-image="<%= car.image ? '/uploads/' + car.image : '/image/noImage.jpg' %>">
+                            <i data-feather="edit" class="car-edit-icon"></i> Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+</div>
+
+<div class="modal" id="carDeleteModal">
+    <div class="modal-content-delete">
+        <img src="/image/img-BeepBeep.png" width="153" height="121">
+        <p><b>Menghapus Data Mobil</b></p>
+        <p class="text-center">Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin
+            menghapus?</p>
+        <div class="d-flex flex-col">
+            <div class="row">
+                <div class="col-6">
+                    <form action="" method="post" id="confirmDeleteBtn">
+                        <button type="submit" class="confirmDeleteBtn">Yes</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <button class="cancelBtn">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="carEditModal">
+    <div class="modal-content-edit">
+        <div class="container mt-5">
+            <form method="post" action="" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="col-3"><label for="name" class="form-label">Name</label></div>
+                    <div class="col"><input type="text" class="form-control" id="name" name="name" value=""></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3"><label for="price" class="form-label">Price</label></div>
+                    <div class="col"><input type="number" class="form-control" id="price" name="price" value="">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3"><label for="image" class="form-label">Image</label></div>
+                    <div class="col">
+                        <input type="file" class="form-control" id="image" name="image" onchange="previewImage();">
+                        <img id="imagePreview" src="" alt="Book Image" height="200">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="cancelEditBtn">Cancel</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="confirmEditBtn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let deleteModal = document.getElementById('carDeleteModal');
+        let deleteButtons = document.querySelectorAll('.deleteCarButton');
+        let confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+        let editModal = document.getElementById('carEditModal');
+        let editButtons = document.querySelectorAll('.editCarButton');
+        let carName = document.getElementById('name');
+        let carPrice = document.getElementById('price');
+        let carImage = document.getElementById('image');
+        let carImagePreview = document.getElementById('imagePreview');
+        let cancelEditBtn = document.querySelector('.cancelEditBtn');
+        let cancelBtn = document.querySelector('.cancelBtn');
+
+        deleteButtons.forEach(button => {
+            button.onclick = function () {
+                let carId = this.getAttribute('data-car-id');
+                confirmDeleteBtn.action = '/cars/delete/' + carId + '?_method=DELETE';
+                deleteModal.style.display = "block";
+            }
+        });
+
+        editButtons.forEach(button => {
+            button.onclick = function () {
+                let carId = this.getAttribute('data-car-id');
+                carName.value = this.getAttribute('data-car-name');
+                carPrice.value = this.getAttribute('data-car-price');
+                carImagePreview.src = this.getAttribute('data-car-image');
+
+                editModal.querySelector('form').action = '/cars/edit/' + carId + '?_method=PUT';
+                editModal.style.display = "block";
+            }
+        })
+
+
+        cancelBtn.onclick = function () {
+            deleteModal.style.display = "none";
+        }
+
+        cancelEditBtn.onclick = function () {
+            editModal.querySelector('form').action = '/cars';
+            editModal.querySelector('form').method = 'get'
+            editModal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == deleteModal) {
+                deleteModal.style.display = "none";
+            } else if (event.target == editModal) {
+                editModal.style.display = "none";
+            }
+        }
+    });
+
+    function previewImage() {
+        const input = document.getElementById('image');
+        const preview = document.getElementById('imagePreview');
+        console.log("input files : " + input.files);
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
