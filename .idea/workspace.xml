@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6506cc8-bff4-4528-b756-b36dec49308d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/image/logo-admin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/asset/uploads/1715853356127-_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/Database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/CarsTable.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/addBook.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/allBooks.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/editBook.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/layouts/admin-layout.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/layouts/main-layout.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/challenge.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.challenge.mjs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;challenge__04&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.12.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.12.7&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Andika/synrgy/Project/Batch 7/challenge/src/views/layouts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Andika\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "Node.js.challenge.mjs.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "challenge__05",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "20.12.1",
+    "javascript.nodejs.core.library.typings.version": "20.12.7",
+    "last_opened_file_path": "D:/Andika/synrgy/Project/Batch 7/challenge/src/views/layouts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\Andika\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Andika\synrgy\Project\Batch 7\challenge\src\views\layouts" />
@@ -145,6 +128,7 @@
       <workItem from="1715781234665" duration="1687000" />
       <workItem from="1715848402422" duration="22436000" />
       <workItem from="1715895407009" duration="15000" />
+      <workItem from="1715943232051" duration="2155000" />
     </task>
     <servers />
   </component>

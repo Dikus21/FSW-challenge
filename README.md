@@ -1,6 +1,6 @@
 # Binar FSW: Challenge 04
 
-- Mulai modifikasi file `server/app.js` apabila ingin membuat HTTP server.
+- Mulai modifikasi file `server/App.js` apabila ingin membuat HTTP server.
 - Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
 
 # `Binar` class
